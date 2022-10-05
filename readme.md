@@ -4,6 +4,7 @@ Experimental project using 8thwall AR with ThreeJS and WebSocket
 
 - on touch the cube mesh: send touch coordinates through websocket
 - websocket server code available on [glitch](https://glitch.com/edit/#!/designium-websocket-server)
+- check vConsole on the client UI to see the communication
 
 ## Setup
 
