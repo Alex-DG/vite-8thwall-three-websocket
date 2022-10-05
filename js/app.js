@@ -24,8 +24,6 @@ const onxrloaded = () => {
 
   // Open the camera and start running the camera run loop.
   XR8.run({ canvas: document.getElementById('experience') })
-
-  console.log('✅', 'XR8 running')
 }
 
 window.onload = () => {

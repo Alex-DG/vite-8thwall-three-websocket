@@ -1,33 +1,30 @@
-const URL = 'wss://javascript.info/article/websocket/demo/hello'
+import Dom from './Dom'
+
+const URL = 'wss://designium-websocket-server.glitch.me/'
 class ConnectionInstance {
-  start() {
-    let socket = new WebSocket(URL)
+  init() {
+    this.websocket = new WebSocket(URL)
 
-    socket.onopen = function (e) {
-      alert('[open] Connection established')
-      alert('Sending to server')
-      socket.send('My name is John')
-    }
+    this.websocket.addEventListener('open', function (e) {
+      // Connection
+      console.log('[ Socket connection successful 🎉]')
+      console.log('------------------------------------')
 
-    socket.onmessage = function (event) {
-      alert(`[message] Data received from server: ${event.data}`)
-    }
+      Dom.init() // show dom elements
+    })
 
-    socket.onclose = function (event) {
-      if (event.wasClean) {
-        alert(
-          `[close] Connection closed cleanly, code=${event.code} reason=${event.reason}`
-        )
-      } else {
-        // e.g. server process killed or network down
-        // event.code is usually 1006 in this case
-        alert('[close] Connection died')
-      }
-    }
+    this.websocket.addEventListener('message', function (e) {
+      // receive data from the server
+      console.log('[ Server listener > data received ✅]')
+      console.log(e.data)
+      console.log('------------------------------------')
+    })
+  }
 
-    socket.onerror = function (error) {
-      alert(`[error] ${error.message}`)
-    }
+  sendMessage(msg = 'Bonjour 🥖') {
+    console.log('[ Client send data 📩]')
+    this.websocket.send(`${msg}`) // Send a string to the server via WebSocket
+    console.log('------------------------------------')
   }
 }
 

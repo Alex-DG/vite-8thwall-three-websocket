@@ -1,8 +1,8 @@
 import Dummy from '../Experience/Dummy'
 import ParticleSystem from '../Experience/ParticleSystem'
+import Connection from '../Experience/Connection'
 
 import VConsole from 'vconsole'
-import Dom from '../Experience/Dom'
 
 const IS_CONSOLE = true
 
@@ -17,8 +17,8 @@ export const initWorldPipelineModule = () => {
     dummy = new Dummy()
     particleSystem = new ParticleSystem({ count: 1000 })
 
-    // UI
-    Dom.init()
+    // Websocket
+    Connection.init()
   }
 
   const updateWorld = () => {
