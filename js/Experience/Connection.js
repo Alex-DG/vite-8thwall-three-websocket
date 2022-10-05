@@ -1,8 +1,7 @@
+const URL = 'wss://javascript.info/article/websocket/demo/hello'
 class ConnectionInstance {
   start() {
-    let socket = new WebSocket(
-      'wss://javascript.info/article/websocket/demo/hello'
-    )
+    let socket = new WebSocket(URL)
 
     socket.onopen = function (e) {
       alert('[open] Connection established')
