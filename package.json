@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "three": "^0.141.0",
+    "vconsole": "^3.14.7",
     "vite-plugin-glsl": "^0.1.2"
   }
 }
