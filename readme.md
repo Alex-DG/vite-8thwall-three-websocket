@@ -6,6 +6,18 @@ Experimental project using 8thwall AR with ThreeJS and WebSocket
 - websocket server code available on [glitch](https://glitch.com/edit/#!/designium-websocket-server)
 - check vConsole on the client UI to see the communication
 
+
+- Prototype video: Left Screen is Client / Right Screen is Server
+
+
+
+
+https://user-images.githubusercontent.com/4311684/194185922-f66c4c84-ddf5-4a58-b205-541d2d8373d9.mp4
+
+
+
+
+
 ## Setup
 
 Run the following commands:
