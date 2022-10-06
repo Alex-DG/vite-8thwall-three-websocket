@@ -7,8 +7,14 @@ Experimental project using 8thwall AR with ThreeJS and WebSocket
 - check vConsole on the client UI to see the communication
 
 
-- Prototype video: top white screen is the server console getting the data sent from the client app on the phone
-https://user-images.githubusercontent.com/4311684/194003023-891c2546-8945-4818-bb38-de2efd2d3402.mp4
+- Prototype video: Left Screen is Client / Right Screen is Server
+
+
+
+
+https://user-images.githubusercontent.com/4311684/194185922-f66c4c84-ddf5-4a58-b205-541d2d8373d9.mp4
+
+
 
 
 
