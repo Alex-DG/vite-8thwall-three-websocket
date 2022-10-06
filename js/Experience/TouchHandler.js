@@ -1,4 +1,5 @@
 import { Vector2 } from 'three'
+import Connection from './Connection'
 
 class TouchHandlerInstance {
   onTouchScene(e) {
@@ -14,7 +15,9 @@ class TouchHandlerInstance {
     // Raycast against the "surface" object.
     const intersects = this.raycaster.intersectObject(this.object)
     if (intersects.length === 1 && intersects[0].object === this.object) {
-      console.log('🖖', { intersects })
+      const object = intersects[0]
+      console.log('🖖', { object })
+      Connection.sendData(object.point)
     }
   }
 
